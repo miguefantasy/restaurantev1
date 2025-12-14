@@ -6,7 +6,6 @@ const MesasScreen = () => {
 
     const mesas = useStateRestaurante((state) => state.mesas);
     const numMesas = Array.from({length: mesas}, (_,i) => i +1);
-    
 
     return (
         <View>
