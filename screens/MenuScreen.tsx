@@ -1,9 +1,9 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import InsertarPlato from './components/InsertarPlato'
 import { useStateRestaurante } from '../context/Context';
 import uuid from 'react-native-uuid';
 import { Plato } from '../entities/Plato';
-import Menu from './components/MenuComponent';
+import MenuComponent from './components/MenuComponent';
 
 const MenuScreen = () => {
 
@@ -30,10 +30,10 @@ const MenuScreen = () => {
             <Text>Menu del restaurante</Text>
             <InsertarPlato action={detallesNuevoPlato}/>
             <Text>Carta:</Text>
-            <Menu 
+            <MenuComponent 
                 state={menu}
                 eliminar={borrarPlato}
-            />
+            /> 
         </View>
     )
 }
